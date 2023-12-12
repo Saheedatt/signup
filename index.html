@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sign Up | Individual</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+</head>
+<body>
+    <nav>
+        <div class="time">
+            <p>9:41</p>
+        </div>
+        <div class="nav-icons">
+            <img src="image/Combined Shape.svg" role="img" alt="network signal">
+            <img src="image/Wi-Fi.svg" role="img" alt="wifi icon">
+            <img src="image/Battery.svg" role="img" alt="battery icon">
+        </div>
+    </nav>
+        <section class="wrapper">
+            <div class="container">
+                <header>
+                <div class="logo">
+                    <img src="image/Logo.svg" alt="logo image" aria-label="Logo">
+                </div>
+                <h1>For Individuals</h1>
+                <p class="mobile-text">
+                    Inspiring wholesome harmony for the mind, body and spirit, for everyone, everywhere.
+                </p>
+                <p class="desktop-text">
+                    Start benefiting from the wellness experience. For companies looking on increasing productivity, and improving organization wellness.                   
+                </p>
+                </header>
+
+                <main role="main">
+                    <form action="#">
+                        <div class="first-row row">
+                            <div class="firstname flex">
+                                <label for="name">First Name</label>
+                                <input type="text" id="name" name="firstname" placeholder="Tolu">
+                            </div>
+                        
+                            <div class="lastname flex">
+                            <label for="name">Last Name</label>
+                            <input type="text" id="name" name="lastname" placeholder="" required>
+                            </div>
+                        </div>
+
+                        <div class="second-row row">
+                            <div class="gender flex">
+                                <label for="gender">Gender</label>
+                        <select class="gender" id="gender" aria-labelledby="gender ">
+                            <option selected value="text">Select here</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Prefer not to say</option>
+                        </select>
+                            </div>
+                            <div class="dob flex">
+                                <label for="date of birth">Date of Birth</label>
+                                <input required type="date" id="dob" name="date of birth" placeholder="Select here" required>
+                        </div>
+                        </div>
+
+                        <div class="third-row row">
+                            <div class="weight flex">
+                                <label for="weight">Weight(KG)</label>
+                                <input type="number" id="weight" name="weight" placeholder="Enter Weight" aria-placeholder="Enter Weight" required>
+                                </div>
+                            <div class="height flex">
+                                <label for="height">Height(CM)</label>
+                                <input type="number" id="height" name="height" placeholder="Enter height here.." aria-placeholder="Enter height here.." required>
+                                </div>
+                        </div>
+                        <div class="activity-level">
+                            <label for="activity level">Activity Level</label>
+                            <select name="activity" id="activity-level">
+                                <option selected value="text">Select here</option>
+                                <option>Beginner</option>
+                                <option>Novice</option>
+                                <option>Intermediate</option>
+                                <option>Professional</option>          
+                                </select>
+                        </div>
+                        <div class="password">
+                            <label for="Password">Password</label>
+                            <input required type="Password" name="password" id="password">
+                        </div>
+                        <div class="button" role="button">
+                            <button type="submit">Register</button>
+                        </div>
+                        <div class="terms" aria-labelledby="terms">
+                            <p id="terms">By clicking Register, you agree to our
+                                <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>
+                                </p>
+                        </div>
+                    </form>
+                </main>
+            </div>
+            <footer>
+                <p id="terms">
+                    By clicking Register, you agree to our
+                   <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>
+                </p>
+            </footer>
+        </section>
+</body>
+</html>

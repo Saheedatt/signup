@@ -1,0 +1,298 @@
+/*CSS RESET*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+    --Gray: #737373;
+    --primary-color:#000B0A;
+    --white: #ffffff;
+    --green: #2ec4b6;
+    --background: #f7fdfc;
+}
+
+/*Downloaded fonts*/
+@font-face{
+    font-family: Brown-bold;
+    src: url('fonts/BrownBold.ttf') format("truetype");
+}
+@font-face{
+    font-family: Brown-Regular;
+    src: url('fonts/BrownLightRegular.ttf') format('truetype');
+}
+@font-face{
+    font-family: "sofia-pro";
+    src: url('sofiapro/Fonts/sofiapro-light.otf') format('opentype');
+}
+a {
+    color: var(--green)
+}
+body{
+    background-color: var(--background);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+    padding-block: 15px;
+}
+header{
+    padding-inline: 20px;
+    > .desktop-text{
+        display: none;
+    }
+}
+.logo{
+    padding-block: 30px;
+    >img {
+        width: 40px;
+    }
+}
+h1{
+    padding-block-end: 12px;
+    font-size: 1.875rem;
+    font-family: Brown-bold;
+    letter-spacing: -0.8px;
+
+}
+p:not(.time >p){ 
+    /* styling all p but the one in time class*/
+    color: var(--Gray);
+    font-size: 1rem;
+    font-family: "sofia-pro";
+    line-height: 1.5rem;
+    padding-block-end: 30px;   
+}
+main{
+    padding-inline: 20px;
+}
+form{
+    background-color: var(--white);
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding-inline: 14px;
+    padding-block-start: 20px;
+    font-family: "sofia-pro";
+}
+input{
+    width: 100%;
+    display: block;
+    outline: none;
+    line-height: 1.25rem;
+    padding-inline-start: 16px;
+    border: 2px solid var(--background);
+    padding-block: 14px;
+    letter-spacing: 1.0px;
+    font-size: 14px;
+    border-radius: 2px;
+    padding-inline-end: 12px;  
+}
+input:focus,
+select:focus{
+    border: 2px solid var(--green);
+}      
+input::placeholder{
+    color: var(--Gray);
+}             
+label{
+    display: block;
+    font-weight: 600;
+    padding-block-end: 10px;
+    line-height: 14px;
+}
+.activity-level,
+.password,
+.flex{
+    padding-block-end: 24px;
+}
+
+/* .firstname input,
+.firstname input::before {
+    border: 2px solid var(--green);
+} */
+
+select{
+    width: 100%;
+    line-height: 1.25rem;
+    display: block;
+    padding-block: 14px;
+    border: 2px solid var(--background);
+    padding-inline-start: 16px;
+    padding-inline-end: 20px;  
+    outline: none;
+    border-radius: 2px;
+    appearance: none; /*Changes the appearance of buttons and other controls to resemble native controls.*/
+    color: var(--Gray);
+    background: url(image/arrow.png) no-repeat;
+    background-position: right 12px center;
+}
+.dob input{
+    background: url(image/calendar.png) no-repeat;
+    background-position: right 12px center;
+}
+/* To hide the default calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+     color: #fff;
+}
+/* To change the default placeholder */
+input[type="date"]::before {
+    content: attr(placeholder);
+    color: var(--Grey);
+    font-family: Sofia-pro;
+}
+input[type="date"] {
+    padding-inline-end: 12px;
+}
+/* to show after click */
+  input[type="date"]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+  
+input[type="date"]:focus::-webkit-datetime-edit {
+    color: black !important;
+}
+.password input{
+    background: url(image/show.png) no-repeat;
+    background-position: right 12px center;
+}
+
+button{
+    background-color: var(--green);
+    outline: none;
+    border-radius: 3px;
+    color: var(--background);
+    padding-block: 14px;
+    width: 100%;
+    border: none; 
+    margin-block-end: 30px;
+    line-height: 1.20rem;
+    font-weight: 600;
+}
+footer{
+    padding-inline: 24px;
+    padding-block-start: 24px;
+}
+.terms{
+    display: none;
+}
+#terms{
+    padding-inline: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--primary-color);
+    text-align: center;
+    line-height: 15px;
+    padding-block-end: 60px;
+}
+/*Responsiveness */
+@media screen  and (min-width: 768px){
+    nav{
+        display: none;
+    }
+    header{
+        padding-block-start: 120px;
+        padding-block-end: 40px;
+        > p.desktop-text{
+            display: contents;
+            font-size: 1rem;
+            line-height: 25px;
+            font-family: Brown-Regular;
+            padding-inline-end: 120px;
+        }
+        > .mobile-text {
+            display: none;
+        }
+    }
+    main{
+        max-width: 100%;
+    }
+    .logo img {
+        width: 60px;
+        margin-inline-start: -10.1px;
+    }
+    h1{
+        padding-block-start: 15px;
+        font-size: 2.5rem; 
+        line-height: 50px;
+        font-weight: 700;
+        padding-block-end: 20px;
+        letter-spacing: -0.6px;
+    }
+    .terms {
+        display: contents;
+    }
+    footer {
+        display: none;
+    }
+    .row{
+        display: flex;
+        gap: 24px;
+    }
+    .flex,
+    .password {
+      width: 100%;
+      padding-block-end: 30px;
+    }
+}
+
+/*I didn't quite get how to use grid to make the perfect container
+ I will be back to fix it when I understand grid better*/
+@media screen and (min-width: 1024px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 140px;
+    }
+    header{
+        max-width: 460px;
+        padding-block-start: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    .logo{
+        padding-block-end: 10px;
+        >img {
+            width: 80px;
+        }
+    }
+    form{
+        max-width: 100%;
+        width: 100%;
+        padding-top: 40px;
+        margin-block: 30px;
+
+    }
+    label{
+        padding-block-end: 8px;
+        line-height: 10px;
+    }
+    select{
+        line-height: 1.15rem;
+        padding-block: 10px;
+    }
+    input{
+        line-height: 1.15rem;
+        padding-block: 10px;
+        letter-spacing: 1.2px;
+    }
+    .password{
+        padding-block-end: 20px;
+    }
+    .button button {
+        margin-block-end: 16px;
+        padding-block: 10px;
+    }
+    #terms {
+        padding-block-end: 40px;
+    }
+   
+}
