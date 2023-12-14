@@ -33,6 +33,7 @@ a {
 }
 body{
     background-color: var(--background);
+    /* overflow: hidden; */
 }
 
 nav {
@@ -292,7 +293,7 @@ footer{
         padding-block: 10px;
     }
     #terms {
-        padding-block-end: 40px;
+        padding-block-end: 32px;
     }
    
 }
